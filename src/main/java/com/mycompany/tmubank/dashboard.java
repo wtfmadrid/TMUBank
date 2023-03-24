@@ -29,11 +29,11 @@ public class dashboard extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        cheq = new javax.swing.JButton();
-        save = new javax.swing.JButton();
-        MKT = new javax.swing.JButton();
-        PB = new javax.swing.JButton();
-        TH = new javax.swing.JButton();
+        Deposit = new javax.swing.JButton();
+        Withdraw = new javax.swing.JButton();
+        makeTransfer = new javax.swing.JButton();
+        payBills = new javax.swing.JButton();
+        transactionhistory = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,20 +42,45 @@ public class dashboard extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel2.setText("DASHBOARD");
 
-        cheq.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
-        cheq.setText("Deposit");
+        Deposit.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
+        Deposit.setText("Deposit");
+        Deposit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DepositMouseClicked(evt);
+            }
+        });
 
-        save.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
-        save.setText("Withdraw");
+        Withdraw.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
+        Withdraw.setText("Withdraw");
+        Withdraw.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                WithdrawMouseClicked(evt);
+            }
+        });
 
-        MKT.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
-        MKT.setText("Make Transfers");
+        makeTransfer.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
+        makeTransfer.setText("Make Transfers");
+        makeTransfer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                makeTransferMouseClicked(evt);
+            }
+        });
 
-        PB.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
-        PB.setText("Pay Bills");
+        payBills.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
+        payBills.setText("Pay Bills");
+        payBills.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                payBillsMouseClicked(evt);
+            }
+        });
 
-        TH.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
-        TH.setText("Transaction History");
+        transactionhistory.setFont(new java.awt.Font("Rockwell Nova", 0, 18)); // NOI18N
+        transactionhistory.setText("Transaction History");
+        transactionhistory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                transactionhistoryMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,11 +88,11 @@ public class dashboard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(cheq)
+                .addComponent(Deposit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(save)
+                .addComponent(Withdraw)
                 .addGap(122, 122, 122)
-                .addComponent(MKT, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(makeTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -77,9 +102,9 @@ public class dashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(161, 161, 161)
-                        .addComponent(PB)
+                        .addComponent(payBills)
                         .addGap(147, 147, 147)
-                        .addComponent(TH))
+                        .addComponent(transactionhistory))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(243, 243, 243)
                         .addComponent(jLabel2)))
@@ -94,18 +119,53 @@ public class dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cheq, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MKT, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Deposit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Withdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(makeTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PB, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TH, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(payBills, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(transactionhistory, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(144, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void DepositMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DepositMouseClicked
+        // TODO add your handling code here:
+        Deposit obj = new Deposit();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_DepositMouseClicked
+
+    private void WithdrawMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WithdrawMouseClicked
+        // TODO add your handling code here:
+        Withdraw obj = new Withdraw();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_WithdrawMouseClicked
+
+    private void makeTransferMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_makeTransferMouseClicked
+        // TODO add your handling code here:
+        Maketransfer obj = new Maketransfer();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_makeTransferMouseClicked
+
+    private void payBillsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_payBillsMouseClicked
+        // TODO add your handling code here:
+        billpayment obj = new billpayment();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_payBillsMouseClicked
+
+    private void transactionhistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transactionhistoryMouseClicked
+        // TODO add your handling code here:
+        transactionhistory obj = new transactionhistory();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_transactionhistoryMouseClicked
 
     /**
      * @param args the command line arguments
@@ -143,12 +203,12 @@ public class dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton MKT;
-    private javax.swing.JButton PB;
-    private javax.swing.JButton TH;
-    private javax.swing.JButton cheq;
+    private javax.swing.JButton Deposit;
+    private javax.swing.JButton Withdraw;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton save;
+    private javax.swing.JButton makeTransfer;
+    private javax.swing.JButton payBills;
+    private javax.swing.JButton transactionhistory;
     // End of variables declaration//GEN-END:variables
 }

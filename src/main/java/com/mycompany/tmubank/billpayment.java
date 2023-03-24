@@ -5,8 +5,6 @@
  */
 package com.mycompany.tmubank;
 
-import com.mycompany.tmubank;
-import com.mycompany.tmubank;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -367,8 +365,7 @@ public class billpayment extends javax.swing.JFrame {
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
-        
-        dashboard obj =new dashboard();
+        dashboard obj = new dashboard();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel3MouseClicked

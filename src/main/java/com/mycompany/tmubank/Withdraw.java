@@ -39,6 +39,11 @@ public class Withdraw extends javax.swing.JFrame {
         jLabel1.setText("WITHDRAW");
 
         jLabel2.setText("BACK>");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Rockwell Nova", 0, 14)); // NOI18N
         jLabel3.setText("AMOUNT:");
@@ -96,6 +101,13 @@ public class Withdraw extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        dashboard obj = new dashboard();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments
