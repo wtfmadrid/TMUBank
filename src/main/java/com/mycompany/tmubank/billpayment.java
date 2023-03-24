@@ -283,9 +283,8 @@ public class billpayment extends javax.swing.JFrame {
 
     private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox1MouseClicked
         // TODO add your handling code here:
-        String selectedValue= jComboBox1.getSelectedItem().toString();
+        String selectedValue = jComboBox1.getSelectedItem().toString();
         PayBillName.setText(selectedValue);
-        
     }//GEN-LAST:event_jComboBox1MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked

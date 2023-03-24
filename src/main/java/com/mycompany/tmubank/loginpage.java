@@ -32,8 +32,6 @@ public class loginpage extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         username = new javax.swing.JFormattedTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         FP = new javax.swing.JButton();
         register = new javax.swing.JLabel();
 
@@ -55,10 +53,6 @@ public class loginpage extends javax.swing.JFrame {
         });
 
         jButton1.setText("LOGIN");
-
-        jLabel3.setText("App available on PlayStore and AppStore");
-
-        jLabel4.setText("Terms & Conditions!");
 
         FP.setText("Forgot Password");
         FP.addActionListener(new java.awt.event.ActionListener() {
@@ -96,13 +90,7 @@ public class loginpage extends javax.swing.JFrame {
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(276, 276, 276)
-                        .addComponent(register))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(252, 252, 252)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(314, 314, 314)
-                        .addComponent(jLabel4)))
+                        .addComponent(register)))
                 .addContainerGap(273, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -122,11 +110,7 @@ public class loginpage extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addGap(8, 8, 8)
                 .addComponent(register)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         pack();
@@ -146,6 +130,9 @@ public class loginpage extends javax.swing.JFrame {
 
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
         // TODO add your handling code here:
+        register obj = new register();
+        obj.setVisible(true);
+        dispose();
     }//GEN-LAST:event_registerMouseClicked
 
     /**
@@ -188,8 +175,6 @@ public class loginpage extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField password;
     private javax.swing.JLabel register;
     private javax.swing.JFormattedTextField username;

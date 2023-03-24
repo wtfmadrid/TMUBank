@@ -56,6 +56,11 @@ public class register extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setText("Back>");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setText("ID Type");
 
@@ -297,6 +302,13 @@ public class register extends javax.swing.JFrame {
     private void passAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_passAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_passAncestorAdded
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        loginpage obj = new loginpage();
+        obj.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel2MouseClicked
 
     /**
      * @param args the command line arguments

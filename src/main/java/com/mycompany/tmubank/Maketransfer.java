@@ -70,6 +70,11 @@ public class Maketransfer extends javax.swing.JFrame {
         jLabel8.setText("Note(Optional)");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TD Bank", "Scotia Bank", "RBC", "BMO", "CIBC" }));
+        jComboBox1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBox1MouseClicked(evt);
+            }
+        });
 
         TransferBTNSubmit.setBackground(new java.awt.Color(0, 204, 51));
         TransferBTNSubmit.setFont(new java.awt.Font("Georgia Pro Cond", 1, 18)); // NOI18N
@@ -158,6 +163,12 @@ public class Maketransfer extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox1MouseClicked
+        // TODO add your handling code here:
+        String selectedValue = jComboBox1.getSelectedItem().toString();
+        TransferBankName.setText(selectedValue);
+    }//GEN-LAST:event_jComboBox1MouseClicked
 
     /**
      * @param args the command line arguments
